@@ -105,6 +105,38 @@ export default function App() {
     />
   </div>
 </section>
+<section style={styles.sectionLight}>
+  <h2 style={styles.sectionTitle}>ADMET Prediction Services</h2>
+
+  <p style={styles.aboutText}>
+    MoliDock AI provides ADMET prediction support to evaluate drug-likeness,
+    absorption, distribution, metabolism, excretion, toxicity, BBB permeability,
+    GI absorption, and Lipinski rule properties using SwissADME and computational
+    pharmacokinetic analysis.
+  </p>
+
+  <div style={styles.cards}>
+    <Card
+      title="Drug-Likeness Screening"
+      text="Evaluation of Lipinski rule, molecular weight, polarity, and compound suitability."
+    />
+
+    <Card
+      title="BBB & GI Absorption"
+      text="Prediction of blood-brain barrier permeability and gastrointestinal absorption."
+    />
+
+    <Card
+      title="Toxicity Interpretation"
+      text="Scientific explanation of safety-related computational prediction outputs."
+    />
+
+    <Card
+      title="SwissADME Report"
+      text="Clean ADMET tables and report-ready interpretation for research projects."
+    />
+  </div>
+</section>
 <section style={styles.section}>
   <h2 style={styles.sectionTitle}>Portfolio & Research Workflow</h2>
 <div style={styles.imageGrid}>
