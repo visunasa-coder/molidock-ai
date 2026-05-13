@@ -66,6 +66,42 @@ export default function App() {
           <Card title="Startup — Custom" text="For biotech, nutraceutical, and AI-bio startups needing custom screening support." />
         </div>
       </section>
+      <section style={styles.sectionLight}>
+  <h2 style={styles.sectionTitle}>
+    Molecular Docking Services
+  </h2>
+
+  <p style={styles.aboutText}>
+    MoliDock AI provides AI-assisted molecular docking services for
+    researchers, biotech startups, students, and pharmaceutical projects.
+    We perform protein-ligand interaction analysis, docking score evaluation,
+    phytocompound screening, target protein preparation, and computational
+    drug discovery workflows using PyRx, AutoDock Vina, Discovery Studio,
+    SwissADME, and PDB databases.
+  </p>
+
+  <div style={styles.cards}>
+    <Card
+      title="Protein-Ligand Docking"
+      text="Docking analysis for disease targets and phytocompounds."
+    />
+
+    <Card
+      title="Binding Interaction Analysis"
+      text="2D and 3D interaction visualization using Discovery Studio."
+    />
+
+    <Card
+      title="ADMET Prediction"
+      text="Drug-likeness and pharmacokinetic prediction workflows."
+    />
+
+    <Card
+      title="Phytocompound Screening"
+      text="Computational screening of natural compounds against target proteins."
+    />
+  </div>
+</section>
 
 <section style={styles.sectionLight}>
   <h2 style={styles.sectionTitle}>Frequently Asked Questions</h2>
@@ -171,11 +207,7 @@ const styles = {
     marginLeft: "18px",
     fontWeight: "bold"
   },
-  hero: {
-    textAlign: "center",
-    padding: "90px 30px",
-    background: "linear-gradient(135deg, #dbeafe, #eff6ff, #e0f2fe)"
-  },
+  
   heroTitle: {
   fontSize: "72px",
   maxWidth: "1000px",
