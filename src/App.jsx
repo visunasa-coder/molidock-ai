@@ -95,7 +95,6 @@ export default function App() {
   </div>
 </section>
 
-<section id="about" style={styles.section}>
       <section id="about" style={styles.section}>
         <h2 style={styles.sectionTitle}>About MoliDock AI</h2>
         <p style={styles.aboutText}>
