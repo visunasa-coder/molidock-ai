@@ -1,5 +1,8 @@
 import React from "react";
-
+import pyrxImg from "./assets/pyrx.png";
+import interactionImg from "./assets/interaction.png";
+import swissadmeImg from "./assets/swissadme.png";
+import moleculeImg from "./assets/molecule.png";
 export default function App() {
   return (
     <div style={styles.page}>
@@ -104,7 +107,25 @@ export default function App() {
 </section>
 <section style={styles.section}>
   <h2 style={styles.sectionTitle}>Portfolio & Research Workflow</h2>
+<div style={styles.imageGrid}>
 
+  <a href={pyrxImg} target="_blank" rel="noopener noreferrer">
+  <img src={pyrxImg} alt="PyRx Docking" style={styles.portfolioImage} />
+</a>
+
+  <a href={interactionImg} target="_blank" rel="noopener noreferrer">
+  <img src={interactionImg} alt="Interaction Analysis" style={styles.portfolioImage} />
+</a>
+
+  <a href={swissadmeImg} target="_blank" rel="noopener noreferrer">
+  <img src={swissadmeImg} alt="SwissADME Result" style={styles.portfolioImage} />
+</a>
+
+  <a href={moleculeImg} target="_blank" rel="noopener noreferrer">
+  <img src={moleculeImg} alt="Molecule Visualization" style={styles.portfolioImage} />
+</a>
+
+</div>
   <div style={styles.cards}>
 
     <Card
@@ -379,10 +400,24 @@ const styles = {
     fontWeight: "bold",
     cursor: "pointer"
   },
+  imageGrid: {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+  gap: "20px",
+  marginBottom: "40px"
+},
+  portfolioImage: {
+  width: "100%",
+  height: "260px",
+  objectFit: "cover",
+  borderRadius: "16px",
+  boxShadow: "0 6px 18px rgba(0,0,0,0.15)"
+},
+
   footer: {
     backgroundColor: "#0f172a",
     color: "white",
     textAlign: "center",
     padding: "22px"
   }
-};
+}
