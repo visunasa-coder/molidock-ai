@@ -15,13 +15,14 @@ export default function App() {
 
       <section style={styles.hero}>
         <h1 style={styles.heroTitle}>
-          AI-Assisted Bioinformatics Services
-        </h1>
+  AI-Powered Molecular Docking & Bioinformatics Services
+</h1>
         <p style={styles.heroText}>
-          Molecular docking, ADMET prediction, phytocompound screening,
-          protein-ligand interaction analysis, and scientific research support
-          for students, researchers, and biotech startups.
-        </p>
+  MoliDock AI provides AI-assisted molecular docking, ADMET prediction,
+  phytocompound screening, protein-ligand interaction analysis,
+  computational drug discovery, and bioinformatics services for
+  researchers, biotech startups, and pharmaceutical innovators worldwide.
+</p>
         <a href="#contact" style={styles.primaryButton}>Get Project Quote</a>
       </section>
 
@@ -148,18 +149,18 @@ const styles = {
     background: "linear-gradient(135deg, #dbeafe, #eff6ff, #e0f2fe)"
   },
   heroTitle: {
-    fontSize: "48px",
-    maxWidth: "900px",
-    margin: "0 auto 20px",
-    color: "#0f172a"
-  },
-  heroText: {
-    fontSize: "20px",
-    lineHeight: "1.7",
-    maxWidth: "850px",
-    margin: "0 auto 35px",
-    color: "#334155"
-  },
+  fontSize: "72px",
+  maxWidth: "1000px",
+  margin: "0 auto 30px",
+  color: "#0f172a",
+  lineHeight: "1.15",
+  fontWeight: "bold"
+},
+  hero: {
+  textAlign: "center",
+  padding: "140px 30px",
+  background: "linear-gradient(135deg, #dbeafe, #eff6ff, #e0f2fe)"
+},
   primaryButton: {
     backgroundColor: "#2563eb",
     color: "white",
