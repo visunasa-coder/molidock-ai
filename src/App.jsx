@@ -67,6 +67,35 @@ export default function App() {
         </div>
       </section>
 
+<section style={styles.sectionLight}>
+  <h2 style={styles.sectionTitle}>Frequently Asked Questions</h2>
+
+  <div style={styles.cards}>
+
+    <Card
+      title="What is molecular docking?"
+      text="Molecular docking is a computational method used to predict how a ligand interacts with a target protein for drug discovery and biological research."
+    />
+
+    <Card
+      title="What software does MoliDock AI use?"
+      text="We use PyRx, AutoDock Vina, Discovery Studio, SwissADME, and protein databases such as PDB for bioinformatics workflows."
+    />
+
+    <Card
+      title="What is ADMET prediction?"
+      text="ADMET prediction evaluates absorption, distribution, metabolism, excretion, and toxicity properties of compounds before laboratory studies."
+    />
+
+    <Card
+      title="Can phytocompounds be screened?"
+      text="Yes. We perform phytocompound screening and interaction analysis for disease targets using computational biology approaches."
+    />
+
+  </div>
+</section>
+
+<section id="about" style={styles.section}>
       <section id="about" style={styles.section}>
         <h2 style={styles.sectionTitle}>About MoliDock AI</h2>
         <p style={styles.aboutText}>
