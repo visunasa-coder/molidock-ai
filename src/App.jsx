@@ -102,7 +102,33 @@ export default function App() {
     />
   </div>
 </section>
+<section style={styles.section}>
+  <h2 style={styles.sectionTitle}>Portfolio & Research Workflow</h2>
 
+  <div style={styles.cards}>
+
+    <Card
+      title="PyRx Molecular Docking"
+      text="Protein-ligand docking workflows using AutoDock Vina and PyRx for binding affinity prediction."
+    />
+
+    <Card
+      title="Discovery Studio Analysis"
+      text="2D and 3D interaction visualization including hydrogen bonding and active site analysis."
+    />
+
+    <Card
+      title="SwissADME Prediction"
+      text="Drug-likeness, GI absorption, BBB permeability, and pharmacokinetic property analysis."
+    />
+
+    <Card
+      title="Phytocompound Research"
+      text="Natural compound screening and literature-assisted computational drug discovery workflows."
+    />
+
+  </div>
+</section>
 <section style={styles.sectionLight}>
   <h2 style={styles.sectionTitle}>Frequently Asked Questions</h2>
 
