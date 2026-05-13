@@ -153,7 +153,14 @@ export default function App() {
           <p><b>Service Area:</b> India, USA, UK, UAE</p>
         </div>
 
-        <button style={styles.whatsappButton}>WhatsApp Project Enquiry</button>
+        <a
+  href="https://wa.me/919791729809?text=Hello%20MoliDock%20AI,%20I%20want%20bioinformatics%20service%20details."
+  target="_blank"
+  rel="noopener noreferrer"
+  style={styles.whatsappButton}
+>
+  WhatsApp Project Enquiry
+</a>
       </section>
 
       <footer style={styles.footer}>
