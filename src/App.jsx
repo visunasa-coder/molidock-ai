@@ -151,6 +151,33 @@ export default function App() {
   </div>
 </section>
 <section style={styles.sectionLight}>
+  <h2 style={styles.sectionTitle}>Why Researchers Choose MoliDock AI</h2>
+
+  <div style={styles.cards}>
+
+    <Card
+      title="Research-Oriented Workflow"
+      text="Structured molecular docking and bioinformatics workflows for academic and startup research projects."
+    />
+
+    <Card
+      title="AI-Assisted Analysis"
+      text="Combination of computational biology tools, literature analysis, and AI-assisted scientific interpretation."
+    />
+
+    <Card
+      title="Clear Scientific Reports"
+      text="Professional reports with docking scores, interaction analysis, ADMET prediction, and publication-style explanations."
+    />
+
+    <Card
+      title="Global Freelance Support"
+      text="Supporting students, researchers, biotech startups, and international clients from India, UAE, UK, and USA."
+    />
+
+  </div>
+</section>
+<section style={styles.sectionLight}>
   <h2 style={styles.sectionTitle}>Frequently Asked Questions</h2>
 
   <div style={styles.cards}>
@@ -211,7 +238,7 @@ export default function App() {
       </section>
 
       <footer style={styles.footer}>
-        © 2026 MoliDock AI — AI Bioinformatics Freelancing Services
+        © 2026 MoliDock AI — AI-Powered Molecular Docking & Bioinformatics Services
       </footer>
     </div>
   );
