@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://molidock-ai.vercel.app/sitemap.xml
