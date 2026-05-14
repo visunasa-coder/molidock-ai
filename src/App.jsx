@@ -294,14 +294,20 @@ export default function App() {
       <li>Phytocompound Screening</li>
     </ul>
 
-    <a
-      href="https://wa.me/919791729809?text=Hello%20MoliBot%20AI,%20I%20want%20help%20with%20molecular%20docking%20or%20bioinformatics%20analysis."
-      target="_blank"
-      rel="noopener noreferrer"
-      style={styles.primaryButton}
-    >
-      Continue on WhatsApp
-    </a>
+    <input
+  placeholder="Ask MoliBot AI..."
+  style={{
+    width: "100%",
+    padding: "12px",
+    borderRadius: "10px",
+    border: "1px solid #ccc",
+    marginBottom: "10px"
+  }}
+/>
+
+<button style={styles.primaryButton}>
+  Ask MoliBot
+</button>
   </div>
 )}
     </div>
