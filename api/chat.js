@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     message.toLowerCase().includes("next generation sequencing")
   ) {
     reply =
-      "Next Generation Sequencing (NGS) is a high-throughput DNA sequencing technology used to rapidly analyze millions of DNA or RNA fragments simultaneously. It is widely used in genomics, cancer research, diagnostics, transcriptomics, and personalized medicine.";
+      "Next Generation Sequencing (NGS) is a high-throughput DNA sequencing technology used to rapidly analyze millions of DNA or RNA fragments simultaneously.";
   } else if (
     message.toLowerCase().includes("molecular docking")
   ) {
@@ -21,7 +21,7 @@ export default async function handler(req, res) {
       "Molecular docking predicts how a ligand binds with a target protein to estimate binding affinity and interaction patterns for drug discovery.";
   } else {
     reply =
-      "MoliBot AI is still learning. Please ask about molecular docking, ADMET prediction, bioinformatics, proteins, ligands, or sequencing.";
+      "MoliBot AI is still learning. Please ask about molecular docking, ADMET prediction, proteins, ligands, or sequencing.";
   }
 
   return res.status(200).json({
