@@ -7,11 +7,18 @@ import moleculeImg from "./assets/molecule.png";
 export default function App() {
   const [chatOpen, setChatOpen] = useState(false);
   const [message, setMessage] = useState("");
-  const [reply, setReply] = useState("");
+const [sentMessage, setSentMessage] = useState("");
+const [reply, setReply] = useState("");
+const [loading, setLoading] = useState(false);
 
-  const askMoliBot = async () => {
-    if (!message.trim()) return;
+const askMoliBot = async () => {
+  if (!message.trim()) return;
 
+  setSentMessage(message);
+  setReply("");
+  setLoading(true);
+
+  try {
     const response = await fetch("/api/chat", {
       method: "POST",
       headers: {
@@ -21,8 +28,14 @@ export default function App() {
     });
 
     const data = await response.json();
-    setReply(data.reply);
-  };
+    setReply(data.reply || "No reply received.");
+    setMessage("");
+  } catch (error) {
+    setReply("MoliBot connection error. Please check API deployment.");
+  }
+
+  setLoading(false);
+};
 
   return (
     <div style={styles.page}>
@@ -174,8 +187,11 @@ export default function App() {
           <div style={styles.chatHeader}>MoliBot AI</div>
 
           <div style={styles.chatMessages}>
-            {message && <div style={styles.userMessage}>{message}</div>}
-            {reply && <div style={styles.botMessage}>{reply}</div>}
+            {sentMessage && <div style={styles.userMessage}>{sentMessage}</div>}
+
+{loading && <div style={styles.botMessage}>Thinking...</div>}
+
+{reply && <div style={styles.botMessage}>{reply}</div>}
           </div>
 
           <input
