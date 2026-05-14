@@ -5,6 +5,36 @@ import swissadmeImg from "./assets/swissadme.png";
 import moleculeImg from "./assets/molecule.png";
 export default function App() {
   const [chatOpen, setChatOpen] = useState(false);
+  const [message, setMessage] = useState("");
+const [reply, setReply] = useState("");
+
+const askMoliBot = async () => {
+  const response = await fetch("/api/chat", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ message }),
+  });
+
+  const data = await response.json();
+  setReply(data.reply);
+};
+  const [message, setMessage] = useState("");
+const [reply, setReply] = useState("");
+
+const askMoliBot = async () => {
+  const response = await fetch("/api/chat", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ message }),
+  });
+
+  const data = await response.json();
+  setReply(data.reply);
+};
 
   return (
     <div style={styles.page}>
@@ -295,6 +325,8 @@ export default function App() {
     </ul>
 
     <input
+  value={message}
+  onChange={(e) => setMessage(e.target.value)}
   placeholder="Ask MoliBot AI..."
   style={{
     width: "100%",
@@ -305,9 +337,15 @@ export default function App() {
   }}
 />
 
-<button style={styles.primaryButton}>
+<button onClick={askMoliBot} style={styles.primaryButton}>
   Ask MoliBot
 </button>
+
+{reply && (
+  <p style={{ marginTop: "15px" }}>
+    {reply}
+  </p>
+)}
   </div>
 )}
     </div>
