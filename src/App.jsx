@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import pyrxImg from "./assets/pyrx.png";
 import interactionImg from "./assets/interaction.png";
 import swissadmeImg from "./assets/swissadme.png";
 import moleculeImg from "./assets/molecule.png";
 export default function App() {
+  const [chatOpen, setChatOpen] = useState(false);
+
   return (
     <div style={styles.page}>
       <header style={styles.header}>
@@ -295,15 +297,35 @@ export default function App() {
       <footer style={styles.footer}>
         © 2026 MoliDock AI — AI-Powered Molecular Docking & Bioinformatics Services
       </footer>
-      <a
-  href="https://wa.me/919791729809?text=Hello%20MoliBot%20AI,%20I%20want%20help%20with%20molecular%20docking%20or%20bioinformatics%20analysis."
-  target="_blank"
-  rel="noopener noreferrer"
+      <button
+  onClick={() => setChatOpen(!chatOpen)}
   style={styles.floatingWhatsapp}
   title="Chat with MoliBot AI"
 >
   🤖
-</a>
+</button>
+
+{chatOpen && (
+  <div style={styles.chatBox}>
+    <h3>MoliBot AI</h3>
+    <p>Hello! I can help you with:</p>
+    <ul>
+      <li>Molecular Docking</li>
+      <li>ADMET Prediction</li>
+      <li>Protein-Ligand Interaction</li>
+      <li>Phytocompound Screening</li>
+    </ul>
+
+    <a
+      href="https://wa.me/919791729809?text=Hello%20MoliBot%20AI,%20I%20want%20help%20with%20molecular%20docking%20or%20bioinformatics%20analysis."
+      target="_blank"
+      rel="noopener noreferrer"
+      style={styles.primaryButton}
+    >
+      Continue on WhatsApp
+    </a>
+  </div>
+)}
     </div>
   );
 }
@@ -500,6 +522,18 @@ overflowX: "hidden",
   boxShadow: "0 8px 22px rgba(37, 99, 235, 0.45)",
   zIndex: 99999,
   cursor: "grab"
+},
+chatBox: {
+  position: "fixed",
+  bottom: "170px",
+  right: "35px",
+  width: "300px",
+  backgroundColor: "white",
+  borderRadius: "18px",
+  padding: "22px",
+  boxShadow: "0 10px 30px rgba(0,0,0,0.25)",
+  zIndex: 99999,
+  border: "1px solid #e5e7eb"
 },
   whatsappButton: {
     backgroundColor: "#16a34a",
