@@ -248,30 +248,7 @@ export default function App() {
           startups, and international clients from India, USA, UK, and UAE.
         </p>
       </section>
-<section style={styles.section}>
-  <h2 style={styles.sectionTitle}>
-    MoliBot AI Assistant
-  </h2>
-
-  <div style={styles.contactBox}>
-    <p>
-      Ask MoliBot AI about:
-    </p>
-
-    <ul>
-      <li>Molecular Docking</li>
-      <li>ADMET Prediction</li>
-      <li>Protein Targets</li>
-      <li>Ligands & Receptors</li>
-      <li>Bioinformatics Tools</li>
-      <li>Phytocompound Screening</li>
-    </ul>
-
-    <button style={styles.primaryButton}>
-      Launch MoliBot AI
-    </button>
-  </div>
-</section>
+      
       <section id="contact" style={styles.contact}>
         <h2 style={styles.sectionTitle}>Contact Us</h2>
         <p style={styles.contactText}>
