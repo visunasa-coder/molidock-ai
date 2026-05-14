@@ -5,7 +5,7 @@ import swissadmeImg from "./assets/swissadme.png";
 import moleculeImg from "./assets/molecule.png";
 export default function App() {
   const [chatOpen, setChatOpen] = useState(false);
-  
+
   const [message, setMessage] = useState("");
 const [reply, setReply] = useState("");
 
@@ -314,17 +314,25 @@ const askMoliBot = async () => {
   🤖
 </div>
 
-{chatOpen && (
-  <div style={styles.chatBox}>
-    <h3>MoliBot AI</h3>
-    <p>Hello! I can help you with:</p>
-    <ul>
-      <li>Molecular Docking</li>
-      <li>ADMET Prediction</li>
-      <li>Protein-Ligand Interaction</li>
-      <li>Phytocompound Screening</li>
-    </ul>
+<div style={styles.chatHeader}>
+  MoliBot AI
+</div>
 
+<div style={styles.chatMessages}>
+
+  {message && (
+    <div style={styles.userMessage}>
+      {message}
+    </div>
+  )}
+
+  {reply && (
+    <div style={styles.botMessage}>
+      {reply}
+    </div>
+  )}
+
+</div>
     <input
   value={message}
   onChange={(e) => setMessage(e.target.value)}
