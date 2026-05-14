@@ -272,6 +272,14 @@ export default function App() {
       <footer style={styles.footer}>
         © 2026 MoliDock AI — AI-Powered Molecular Docking & Bioinformatics Services
       </footer>
+      <a
+  href="https://wa.me/919791729809"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={styles.floatingWhatsapp}
+>
+  💬
+</a>
     </div>
   );
 }
@@ -299,7 +307,9 @@ const styles = {
     fontFamily: "Arial, sans-serif",
     backgroundColor: "#f4f8fb",
     color: "#111827",
-    minHeight: "100vh"
+    minHeight: "100vh",
+    position: "relative",
+overflowX: "hidden",
   },
   header: {
     backgroundColor: "#0f172a",
@@ -449,6 +459,23 @@ const styles = {
     boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
     textAlign: "left"
   },
+  floatingWhatsapp: {
+  position: "fixed",
+  bottom: "90px",
+right: "35px",
+  backgroundColor: "#25D366",
+  color: "white",
+  borderRadius: "50%",
+  width: "60px",
+  height: "60px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontSize: "28px",
+  textDecoration: "none",
+  boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+  zIndex: 99999
+},
   whatsappButton: {
     backgroundColor: "#16a34a",
     color: "white",
