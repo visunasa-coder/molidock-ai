@@ -248,7 +248,7 @@ export default function App() {
           startups, and international clients from India, USA, UK, and UAE.
         </p>
       </section>
-      
+
       <section id="contact" style={styles.contact}>
         <h2 style={styles.sectionTitle}>Contact Us</h2>
         <p style={styles.contactText}>
@@ -274,13 +274,14 @@ export default function App() {
       <footer style={styles.footer}>
         © 2026 MoliDock AI — AI-Powered Molecular Docking & Bioinformatics Services
       </footer>
-      <button
-  onClick={() => setChatOpen(!chatOpen)}
+      <div
+  draggable="true"
   style={styles.floatingWhatsapp}
+  onClick={() => setChatOpen(!chatOpen)}
   title="Chat with MoliBot AI"
 >
   🤖
-</button>
+</div>
 
 {chatOpen && (
   <div style={styles.chatBox}>
