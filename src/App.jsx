@@ -296,12 +296,13 @@ export default function App() {
         © 2026 MoliDock AI — AI-Powered Molecular Docking & Bioinformatics Services
       </footer>
       <a
-  href="https://wa.me/919791729809"
+  href="https://wa.me/919791729809?text=Hello%20MoliBot%20AI,%20I%20want%20help%20with%20molecular%20docking%20or%20bioinformatics%20analysis."
   target="_blank"
   rel="noopener noreferrer"
   style={styles.floatingWhatsapp}
+  title="Chat with MoliBot AI"
 >
-  💬
+  🤖
 </a>
     </div>
   );
@@ -485,19 +486,20 @@ overflowX: "hidden",
   floatingWhatsapp: {
   position: "fixed",
   bottom: "90px",
-right: "35px",
-  backgroundColor: "#25D366",
+  right: "35px",
+  backgroundColor: "#2563eb",
   color: "white",
   borderRadius: "50%",
-  width: "60px",
-  height: "60px",
+  width: "70px",
+  height: "70px",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  fontSize: "28px",
+  fontSize: "34px",
   textDecoration: "none",
-  boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
-  zIndex: 99999
+  boxShadow: "0 8px 22px rgba(37, 99, 235, 0.45)",
+  zIndex: 99999,
+  cursor: "grab"
 },
   whatsappButton: {
     backgroundColor: "#16a34a",
