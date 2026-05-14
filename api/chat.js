@@ -12,12 +12,17 @@ export default async function handler(req, res) {
   try {
     const { message } = req.body;
 
-    const response = await client.responses.create({
-      model: "gpt-4.1-mini",
-      input: `You are MoliBot AI, a fast, accurate bioinformatics assistant for MoliDock AI. 
-Answer clearly and scientifically. Focus on molecular docking, ADMET, drug discovery, biotechnology, genomics, NGS, proteins, ligands and research support.
+    if (!process.env.OPENAI_API_KEY) {
+      return res.status(500).json({
+        reply: "OPENAI_API_KEY is missing in Vercel Environment Variables.",
+      });
+    }
 
-User question: ${message}`,
+    const response = await client.responses.create({
+      model: "gpt-4o-mini",
+      input: `You are MoliBot AI, a helpful bioinformatics assistant. Answer clearly and scientifically.
+
+User: ${message}`,
     });
 
     return res.status(200).json({
@@ -25,7 +30,7 @@ User question: ${message}`,
     });
   } catch (error) {
     return res.status(500).json({
-      reply: "MoliBot AI error: API key or server connection problem.",
+      reply: "MoliBot server error: " + error.message,
     });
   }
 }
