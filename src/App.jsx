@@ -5,6 +5,7 @@ import swissadmeImg from "./assets/swissadme.png";
 import moleculeImg from "./assets/molecule.png";
 export default function App() {
   const [chatOpen, setChatOpen] = useState(false);
+  
   const [message, setMessage] = useState("");
 const [reply, setReply] = useState("");
 
